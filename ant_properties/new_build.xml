@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<project name="VTForce" default="info">
+
+
+
+<target name="info">
+<echo>info block executed</echo>
+<property file="build.properties"/>
+<echo>Hello</echo>
+<echo>The ant version is ${CompanyName}</echo>
+<echo>The ant URL is ${CopyURL}</echo>
+</target>
+
+
+
+</project>

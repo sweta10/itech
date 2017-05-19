@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<project name="VT Force" default="run">
+
+<target name="run">
+<echo>jar block executed</echo>
+</target>
+
+</project>

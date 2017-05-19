@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<project name="VT Force" default="run">
+
+
+
+<target name="info">
+<echo>info block executed</echo>
+</target>
+
+
+
+<target name="clean" depends="info">
+<echo>clean block</echo>
+<delete dir="./jar"/>
+<echo>jar folder deleted successfully</echo>
+</target>
+
+
+<target name="compile" depends="clean">
+<echo>compile block executed</echo>
+<javac srcdir="./java" destdir="./classes"/>
+</target>
+
+
+
+<target name="jar" depends="compile">
+<echo>jar block executed</echo>
+<echo>jar block execcuted</echo>
+<mkdir dir="./jar"/>
+<jar destfile="./jar/abc.jar" basedir="./classes">
+
+	<manifest>
+	<attribute name="Main-Class" value="Hello"/>
+	</manifest>
+</jar>
+</target>
+
+
+
+<target name="run" depends="jar">
+<echo>run block</echo>
+<java jar="./jar/abc.jar" fork="true"/>
+</target>
+
+
+</project>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<project name="VTForce" default="clean">
+
+
+
+<target name="info">
+
+<echo>info block executed</echo>
+<echo>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</echo>
+<echo>1. the ant version: ${ant.version}</echo>
+<echo>2. ant filename: ${ant.file}</echo>
+<echo>3. base directory: ${basedir}</echo>
+<echo>4. the java version: ${ant.java.version}</echo>
+<echo>5. the project name: ${ant.project.name}</echo>
+<echo>6. the ant project default: ${ant.project.default-target}</echo>
+<echo>7. the ant project invoked targets: ${ant.project.invoked-targets}</echo>
+<echo>8. ant core library: ${ant.core.lib}</echo>
+<echo>9. ant home: ${ant.home}</echo>
+<echo>10. The ant library directory: ${ant.library.dir}</echo>
+<echo>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</echo>
+
+</target>
+
+
+
+<target name="clean" depends="compile">
+<echo>clean block</echo>
+</target>
+
+
+<target name="compile" depends="info,jar">
+<echo>compile block executed</echo>
+</target>
+
+
+
+<target name="jar">
+<echo>jar block executed</echo>
+</target>
+
+
+
+<target name="run">
+<echo>run block</echo>
+</target>
+
+
+</project>
